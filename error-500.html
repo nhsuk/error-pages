@@ -7,6 +7,30 @@
     <title>Error</title>
 
     <style>
+      @font-face {
+        font-family: "FS Me";
+        src: url("https://dhrlmnmyf2njb.cloudfront.net/assets/fonts/fsme/FSMeWeb-Light.eot?") format("eot"), url("https://dhrlmnmyf2njb.cloudfront.net/assets/fonts/fsme/FSMeWeb-Light.woff") format("woff");
+        font-weight: 200;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "FS Me";
+        src: url("https://dhrlmnmyf2njb.cloudfront.net/assets/fonts/fsme/FSMeWeb-Regular.eot?") format("eot"), url("https://dhrlmnmyf2njb.cloudfront.net/assets/fonts/fsme/FSMeWeb-Regular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "FS Me";
+        src: url("https://dhrlmnmyf2njb.cloudfront.net/assets/fonts/fsme/FSMeWeb-Bold.eot?") format("eot"), url("https://dhrlmnmyf2njb.cloudfront.net/assets/fonts/fsme/FSMeWeb-Bold.woff") format("woff");
+        font-weight: 600;
+        font-style: bold;
+      }
+      @font-face {
+        font-family: "FS Me";
+        src: url("https://dhrlmnmyf2njb.cloudfront.net/assets/fonts/fsme/FSMeWeb-Heavy.eot?") format("eot"), url("https://dhrlmnmyf2njb.cloudfront.net/assets/fonts/fsme/FSMeWeb-Heavy.woff") format("woff");
+        font-weight: 800;
+        font-style: bold;
+      }
       *, *::before, *::after {box-sizing: inherit;}
       html, body {font-family: "FS Me",Arial,sans-serif;}
       html {background-color:#d9e1e2;}
@@ -18,55 +42,50 @@
       .notification-banner--inner {font-size:16px; line-height:24px; padding:8px 0;}
       .notification-banner--link {color:#005da2;}
       .notification-banner--link:hover, .notification-banner--link:active, .notification-banner--link:focus {color:#0077a5;}
-      .global-header {background-color:#0072c6;}
-      .global-header--inner {padding:24px 0;}
-      .global-header--link {background: url("images/logotype-nhs-colour.png") no-repeat; background-size:contain; display:block; height:32px; text-indent:-999em; width:79px;}
-      .notification-banner--inner, .global-header--inner, .main--inner, .global-footer--inner {max-width:960px; margin:0 15px;}
-      main {border-top:1px solid #338ed1;}
+      .global-header {background-color:#fff; border-bottom:2px solid #0072c6;}
+      .global-header--inner {padding-bottom:16px; padding-top:16px;}
+      .global-header--link {background:url("images/logotype-nhs-colour__reverse.png") no-repeat; -webkit-background-size:contain; -moz-background-size:contain; -o-background-size:contain; background-size:contain; display:block; height:32px; text-indent:-999em; width:79px}
+      .notification-banner--inner, .global-header--inner, .main--inner, .global-footer--inner {max-width:960px; margin:0 16px;}
       .error-message {font-size:20px; line-height:32px;}
-      .global-footer {background-color:#d9e1e2; border-top:1px solid #f7f9f9; color:#425563;}
-      .global-footer * {font-size:16px; line-height:24px;}
-      .global-footer--inner {padding:0 0 64px;}
       .util-visuallyhidden {border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;}
-      .inline-list {list-style:none; padding-left:0;}
-      .inline-list--item {margin:0;}
-      .global-footer a {color:#425563;}
-      .global-footer a:hover {color:#000;}
-
-      @media not all, only screen and (min--moz-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-        .global-header--link {background-image:url("images/logotype-nhs-colour@2x.png"); background-size:79px 32px;}
+      .global-footer {background-color:#0072c6; border-top:4px solid #005b9e; color:#fff;}
+      .global-footer li + li {margin-top:8px;}
+      .global-footer a:link, .global-footer a:visited {color:#fff;}
+      .global-footer a:hover {color:#d4efff;}
+      .global-footer a:focus {outline:3px solid #ffb81c;}
+      .global-footer--inner {padding-bottom:96px; padding-top:32px;}
+      .global-footer--inner:before {background:url("images/logotype-nhs-colour.png") no-repeat; -webkit-background-size:contain; -moz-background-size:contain; -o-background-size:contain; background-size:contain; content:""; display:block; height:32px; margin-bottom:32px; text-indent:-999em; width:79px;}
+      .link-list {list-style:none;padding-left:0;}
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .global-header--link {background-image:url("images/logotype-nhs-colour__reverse@2x.png"); -webkit-background-size:79px 32px; -moz-background-size:79px 32px; -o-background-size:79px 32px; background-size:79px 32px}
       }
-
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .global-footer--inner:before{background-image:url("images/logotype-nhs-colour@2x.png"); -webkit-background-size:79px 32px; -moz-background-size:79px 32px; -o-background-size:79px 32px; background-size:79px 32px;}
+      }
       @media (max-width: 640px) {
-        .global-header--inner {padding:16px 0;}
         h1 {font-size:40px; line-height:48px; padding:0;}
+        .global-header--inner {padding:16px 0;}
       }
-
       @media (min-width: 641px) {
         h1 {font-size:48px; line-height:64px;}
-        .inline-list--item {display:inline;}
-        .inline-list__slash .inline-list--item:after {content: "/";}
-        .inline-list__slash .inline-list--item:last-child:after {content: "";}
+        .global-header--inner {padding-bottom: 24px; padding-top: 24px;}
       }
-
       @media (max-width: 924px) {
         .main--inner {padding:16px 0;}
         .error-message {padding:32px 0 0 0;}
-        .inline-list {margin-top:16px;}
       }
-
       @media (min-width: 925px) {
         h1 {font-size:64px; line-height:80px;}
         .notification-banner--inner, .global-header--inner, .main--inner, .global-footer--inner {margin:0 30px;}
         .main--inner {padding:32px 0;}
         .error-message {padding:64px 0 0 0;}
-        .inline-list {margin-top:32px;}
+        .global-footer * + * {margin-top:32px;}
+        .global-footer--inner {padding-bottom:128px; padding-top:48px;}
+        .global-footer--inner::before {margin-bottom:48px;}
       }
-
       @media (min-width: 1020px) {
         .notification-banner--inner, .global-header--inner, .main--inner, .global-footer--inner {margin:0 auto;}
       }
-
     </style>
   </head>
 
@@ -96,12 +115,12 @@
       <div class="global-footer">
         <div class="global-footer--inner">
           <h2 class="util-visuallyhidden">Support links</h2>
-          <ul class="inline-list inline-list__slash">
-            <li class="inline-list--item">
-              <a href="http://beta.nhs.uk/help/clinical-assurance">Clinical assurance</a>
+          <ul class="link-list">
+            <li>
+              <a href="https://beta.nhs.uk/help/clinical-assurance">Clinical assurance</a>
             </li>
-            <li class="inline-list--item">
-              <a href="http://beta.nhs.uk/help/cookies">Cookies</a>
+            <li>
+              <a href="https://beta.nhs.uk/help/cookies">Cookies</a>
             </li>
           </ul>
         </div>
